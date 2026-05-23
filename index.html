@@ -190,12 +190,41 @@ section{
   color:#666;
 }
 
+/* ================= MANFAAT SECTION (BARU) ================= */
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  list-style: none;
+}
+
+.benefit-item {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  border-left: 5px solid #4CAF50;
+}
+
+.benefit-item h3 {
+  color: #173728;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.benefit-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
 /* ================= ABOUT ================= */
 
 .about{
   display:grid;
-  grid-template-columns:420px 1fr;
-  gap:40px;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
   align-items:center;
 }
 
@@ -205,11 +234,6 @@ section{
   object-fit:cover;
   border-radius:24px;
   box-shadow:0 10px 25px rgba(0,0,0,.15);
-  margin-left: 190px;
-}
-
-.about-text{
-  margin-left: 200px;
 }
 
 .about-text h3{
@@ -236,19 +260,17 @@ section{
 }
 
 @keyframes fade{
-
   from{
     opacity:0;
     transform:translateY(10px);
   }
-
   to{
     opacity:1;
     transform:translateY(0);
   }
 }
 
-/* ================= CARDS ================= */
+/* ================= CARDS & REVIEWS ================= */
 
 .cards{
   display:grid;
@@ -287,6 +309,40 @@ section{
 .card-content p{
   line-height:1.8;
   color:#666;
+}
+
+/* ================= REVIEWS SECTION (BARU) ================= */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  font-weight: 600;
+  color: #173728;
+  font-size: 16px;
 }
 
 /* ================= OPENING HOURS ================= */
@@ -346,7 +402,6 @@ footer{
 /* ================= MOBILE ================= */
 
 @media(max-width:900px){
-
   nav{
     display:none;
   }
@@ -357,10 +412,6 @@ footer{
 
   .about{
     grid-template-columns:1fr;
-  }
-
-  .about-text{
-    margin-left:0;
   }
 
   .about-text h3{
@@ -391,12 +442,8 @@ footer{
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-
   <div class="logo">ZooPark</div>
-
   <nav>
     <a href="#">Home</a>
     <a href="#">Animals</a>
@@ -404,278 +451,183 @@ footer{
     <a href="#">Tickets</a>
     <a href="#">Contact</a>
   </nav>
-
 </header>
-
-<!-- ================= HERO SLIDER ================= -->
 
 <div class="hero">
 
-  <!-- slide 1 -->
-
-  <div class="slide active"
-  style="background-image:url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1600&auto=format&fit=crop');">
-
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1600&auto=format&fit=crop');">
     <div class="overlay"></div>
-
     <div class="hero-content">
-
       <h1>Welcome To Modern Zoo Park</h1>
-
-      <p>
-        Explore wildlife and discover amazing animals
-        from around the world.
-      </p>
-
-      <a href="#" class="btn">
-        Explore Now
-      </a>
-
+      <p>Explore wildlife and discover amazing animals from around the world.</p>
+      <a href="#" class="btn">Explore Now</a>
     </div>
-
   </div>
 
-  <!-- slide 2 -->
-
-  <div class="slide"
-  style="background-image:url('https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2024/06/18101103/rafflesia-arnoldii.webp');">
-
+  <div class="slide" style="background-image:url('https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2024/06/18101103/rafflesia-arnoldii.webp');">
     <div class="overlay"></div>
-
     <div class="hero-content">
-
       <h1>Amati Flora & Fauna</h1>
-
-      <p>
-        Nikmati pengalaman edukasi alam dengan
-        flora dan fauna langka Indonesia.
-      </p>
-
-      <a href="#" class="btn">
-        Learn More
-      </a>
-
+      <p>Nikmati pengalaman edukasi alam dengan flora dan fauna langka Indonesia.</p>
+      <a href="#" class="btn">Learn More</a>
     </div>
-
   </div>
 
-  <!-- slide 3 -->
-
-  <div class="slide"
-  style="background-image:url('https://images.unsplash.com/photo-1519066629447-267fffa62d4b?q=80&w=1600&auto=format&fit=crop');">
-
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519066629447-267fffa62d4b?q=80&w=1600&auto=format&fit=crop');">
     <div class="overlay"></div>
-
     <div class="hero-content">
-
       <h1>Family Adventure</h1>
-
-      <p>
-        Tempat wisata keluarga dengan pengalaman
-        safari dan hiburan yang menyenangkan.
-      </p>
-
-      <a href="#" class="btn">
-        Visit Today
-      </a>
-
+      <p>Tempat wisata keluarga dengan pengalaman safari dan hiburan yang menyenangkan.</p>
+      <a href="#" class="btn">Visit Today</a>
     </div>
-
   </div>
-
-  <!-- buttons -->
 
   <button class="slider-btn prev-slide"><</button>
   <button class="slider-btn next-slide">></button>
 
 </div>
 
-<!-- ================= ABOUT ================= -->
+<section style="background: #eef2ed;">
+  <div class="section-title">
+    <h2>Kenapa Harus ke Kebun Binatang Sih?</h2>
+    <p>Ternyata ada banyak sekali manfaatnya untuk kita, lho!</p>
+  </div>
+
+  <ul class="benefits-list">
+    <li class="benefit-item">
+      <h3>1. Edukasi Nyata</h3>
+      <p>Melihat langsung satwa memberikan pemahaman lebih mendalam dibanding hanya membaca buku atau menonton video.</p>
+    </li>
+    <li class="benefit-item">
+      <h3>2. Sarana Refreshing</h3>
+      <p>Berjalan di area terbuka hijau yang asri sangat ampuh untuk mengurangi stres dari kepenatan aktivitas sehari-hari.</p>
+    </li>
+    <li class="benefit-item">
+      <h3>3. Menumbuhkan Empati</h3>
+      <p>Mengenal kehidupan hewan langka membangun rasa peduli anak-anak untuk menjaga lingkungan dan kelestarian alam.</p>
+    </li>
+    <li class="benefit-item">
+      <h3>4. Quality Time Keluarga</h3>
+      <p>Menjadi momen berharga untuk menjelajah, belajar, dan berfoto bersama seluruh anggota keluarga tercinta.</p>
+    </li>
+  </ul>
+</section>
 
 <section>
-
   <div class="section-title">
-
     <h2>About Our Zoo</h2>
     <p>Kenalan dulu yuk!</p>
-
   </div>
 
   <div class="about">
-
-    <!-- image -->
-
     <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- text -->
-
     <div class="about-text">
-
       <h3>Conservation & Education</h3>
-
-      <p class="leo-title">
-        Leo si singa pemberani dari ZooPark!!
-      </p>
-
+      <p class="leo-title">Leo si singa pemberani dari ZooPark!!</p>
       <p class="about-desc">
-        Pelajari mengenai hewan dan tanaman yang terancam oleh kepunahan 
-        karena pemburuan liar
+        Pelajari mengenai hewan dan tanaman yang terancam oleh kepunahan karena pemburuan liar
       </p>
-
-      <button class="btn" onclick="showText()">
-        Meet Leo
-      </button>
-
-      <!-- hidden text -->
+      <button class="btn" onclick="showText()">Meet Leo</button>
 
       <div class="extra-text" id="leoText">
-
         Halo aku Leo 🦁 !! <br><br>
-
         Umurku 7 tahun dan aku berasal dari Afrika. <br><br>
-
-        Aku diselamatkan dari perdagangan satwa ilegal
-        dan sekarang tinggal dengan aman di kebun binatang ini. <br><br>
-
-        Kondisiku sehat, aktif, dan aku sangat suka bermain
-        di pagi hari bersama penjagaku.
-
+        Aku diselamatkan dari perdagangan satwa ilegal dan sekarang tinggal dengan aman di kebun binatang ini. <br><br>
+        Kondisiku sehat, aktif, dan aku sangat suka bermain di pagi hari bersama penjagaku.
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-<!-- ================= NEWS ================= -->
-
 <section>
-
   <div class="section-title">
-
     <h2>Latest News</h2>
     <p>Zoo activities and events</p>
-
   </div>
 
   <div class="cards">
-
-    <!-- card 1 -->
-
     <div class="card">
-
       <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?q=80&w=1200&auto=format&fit=crop">
-
       <div class="card-content">
-
         <h4>Wildlife Conservation</h4>
-
-        <p>
-          Learn how we protect endangered species
-          and preserve biodiversity.
-        </p>
-
+        <p>Learn how we protect endangered species and preserve biodiversity.</p>
       </div>
-
     </div>
 
-    <!-- card 2 -->
-
     <div class="card">
-
       <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
-
       <div class="card-content">
-
         <h4>Baby Orangutan</h4>
-
-        <p>
-          Meet our newest orangutan member
-          in the tropical habitat.
-        </p>
-
+        <p>Meet our newest orangutan member in the tropical habitat.</p>
       </div>
-
     </div>
-
-    <!-- card 3 -->
 
     <div class="card">
-
       <img src="https://www.tarangirenationalparks.com/wp-content/uploads/2020/12/8-Days-Explore-Tanzania-Safaris.jpg">
-
       <div class="card-content">
-
         <h4>Safari Experience</h4>
-
-        <p>
-          Enjoy family adventures and educational
-          wildlife exploration.
-        </p>
-
+        <p>Enjoy family adventures and educational wildlife exploration.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-<!-- ================= OPENING HOURS ================= -->
+<section style="background: #eef2ed;">
+  <div class="section-title">
+    <h2>Apa Kata Mereka?</h2>
+    <p>Ulasan jujur dari para pengunjung setia ZooPark</p>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Sangat bagus! Tempatnya bersih, fasilitasnya lengkap, dan anak-anak senang sekali bisa berinteraksi langsung dengan hewan-hewan di sini. Sangat edukatif!"</p>
+      <p class="review-author">— Andi Wijaya, Jakarta</p>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Pengalaman liburan yang luar biasa. Bagian edukasi konservasinya dapet banget, lingkungan kebun binatangnya rimbun mirip habitat aslinya. Bintang 5 pokoknya!"</p>
+      <p class="review-author">— Sarah Amelia, Bandung</p>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Kebun binatang modern terbaik yang pernah saya kunjungi. Hebatnya hewan-hewan di sini terlihat gemuk, terawat, dan sehat. Rekomendasi buat wisata keluarga."</p>
+      <p class="review-author">— Budi Santoso, Surabaya</p>
+    </div>
+  </div>
+</section>
 
 <section>
-
   <div class="info">
-
     <div class="info-text">
-
       <h2>Waktu Kerja</h2>
-
       <p>Senin - Sabtu</p>
       <p>07:00 WIB - 16:00 WIB</p>
       <p>Minggu Tutup</p>
-
-      <button class="btn ticket-btn">
-        Buy Ticket
-      </button>
-
+      <button class="btn ticket-btn">Buy Ticket</button>
     </div>
-
     <div class="ticket-image">
-
       <img src="https://images.unsplash.com/photo-1519066629447-267fffa62d4b?q=80&w=1200&auto=format&fit=crop">
-
     </div>
-
   </div>
-
 </section>
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
   <p>© 2026 ZooPark. All Rights Reserved.</p>
-
 </footer>
-
-<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 /* ================= SHOW TEXT ================= */
 
 function showText(){
-
   const text = document.getElementById("leoText");
-
   if(text.style.display === "block"){
-
     text.style.display = "none";
-
   }else{
-
     text.style.display = "block";
   }
 }
@@ -683,40 +635,31 @@ function showText(){
 /* ================= SLIDER ================= */
 
 const slides = document.querySelectorAll(".slide");
-
 const nextBtn = document.querySelector(".next-slide");
 const prevBtn = document.querySelector(".prev-slide");
 
 let currentSlide = 0;
 
 function showSlide(index){
-
   slides.forEach((slide)=>{
     slide.classList.remove("active");
   });
-
   slides[index].classList.add("active");
 }
 
 nextBtn.addEventListener("click", ()=>{
-
   currentSlide++;
-
   if(currentSlide >= slides.length){
     currentSlide = 0;
   }
-
   showSlide(currentSlide);
 });
 
 prevBtn.addEventListener("click", ()=>{
-
   currentSlide--;
-
   if(currentSlide < 0){
     currentSlide = slides.length - 1;
   }
-
   showSlide(currentSlide);
 });
 
